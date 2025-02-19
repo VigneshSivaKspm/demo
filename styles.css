@@ -309,11 +309,6 @@ footer {
     text-align: center;
 }
 
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    /* Enable horizontal scrolling */
-}
 
 .title {
     font-size: 30px;
@@ -362,4 +357,13 @@ footer {
 
 .price-table tr:hover {
     background-color: #f1f1f1;
+}
+
+@media (min-width: 769px) {
+    .price-table {
+        display: table;
+        /* Ensure table is table-level for desktop view */
+        overflow-x: visible;
+        /* Disable horizontal scrolling */
+    }
 }
