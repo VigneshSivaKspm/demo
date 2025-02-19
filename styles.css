@@ -303,11 +303,16 @@ footer {
     }
 }
 
-
 .container {
-    width: 80%;
+    width: 100%;
     margin: 50px auto;
     text-align: center;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
 }
 
 .title {
@@ -328,6 +333,10 @@ footer {
     margin-top: 20px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    /* Ensure table is block-level for scrolling */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
 }
 
 .price-table th,
