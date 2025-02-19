@@ -1,0 +1,356 @@
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-width: 100%;
+    /* Ensure no overflow */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    position: static;
+    margin-right: 20px;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 36px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title .orange {
+    font-size: 50px;
+    background: linear-gradient(to right, #FF8800, #FF5500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.title .green {
+    color: #00AA44;
+}
+
+.tagline {
+    color: #FF8800;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.gov-logo {
+    position: static;
+    margin-left: 20px;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gov-logo img {
+    height: 50px;
+}
+
+main {
+    padding: 20px;
+}
+
+main h1 {
+    background: linear-gradient(to right, #00AA44, #00FF88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.solar-benefits,
+.solar-diagram,
+.solar-uses {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.solar-benefits h2,
+.solar-diagram h2,
+.solar-uses h2 {
+    color: #FF8800;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.solar-benefits img,
+.solar-diagram img,
+.solar-uses .image-container img {
+    width: 100%;
+    max-width: 400px;
+    /* Ensure no image overflows */
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.solar-uses .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.solar-uses .image-container {
+    flex: 1 1 calc(50% - 20px);
+}
+
+footer {
+    background: linear-gradient(to right, #FF8800, #FF5500);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.contact p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.contact .phone {
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 28px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+
+    .solar-uses .image-container {
+        flex: 1 1 100%;
+    }
+
+    .solar-benefits,
+    .solar-diagram,
+    .solar-uses {
+        padding: 15px;
+        margin: 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo,
+    .gov-logo {
+        flex: 0 0 auto;
+        margin: 10px 0;
+    }
+
+    .title {
+        flex: 1 1 auto;
+        order: 0;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .gov-logo img {
+        height: 40px;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    .footer-content {
+        padding: 0 10px;
+    }
+}
+
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.price-table th,
+.price-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.price-table th {
+    background-color: #f1f1f1;
+    color: #ff0000;
+    font-size: 18px;
+}
+
+.price-table td {
+    font-size: 16px;
+}
+
+.price-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.price-table tr:hover {
+    background-color: #f1f1f1;
+}
